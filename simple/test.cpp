@@ -164,11 +164,48 @@ using namespace std;
 //	return 0;
 //}
 
+// attays
+//int main() {
+//	double arr[] = {1, 2, 3, 4, 5, 6}                //declear the variable type of the array and equate it to the array values in curly braces
+//}
+
+//loops with arrays
+
+//int main() {
+//	double prices[] = { 45.4, 48.3, 65.1, 3.65, 5.78 };
+//	for (int i = 0; i < 5; i++) {
+//		std::cout << prices[i] << std::endl;
+//	}
+//	return 0;
+//}
+
+/// <summary>
+/// learnt something new i guess
+/// </summary>
+double prices[] = { 45.4, 48.3, 65.1, 3.65, 5.78 };
+//int main() {
+//	for (int i = 0; i < 5; i++) {
+//		std::cout << prices[i] << std::endl;
+//	}
+//}
+
+// for each loop iteratu=ing over an array
+
+//int main() {
+//	for (double x : prices) {   // this automatically assigns x(which can be anything, it doesn't have to be named x) to each value in the array
+//		std::cout << x << std::endl;
+//	}
+//	return 0;
+//}
+
+// function to calculate the total price in a shopping cart
+
 int main() {
-	int x = 1;
-	while (x < 10) {
-		std::cout << "hello world" << std::endl;
-		x += 3;
-	}
-	return 0;
+    double prices[] = { 6.99, 8.5, 42.9, 105.4, 42, 98.1, 2.39, 1.99, 68.76, 9.99, 33.67, 105, 99, 67, 24.56, 0.2, 59.87, 77.2 };
+    double total = 0;
+    for (double price : prices) {
+        total += price;
+    }
+    std::cout << total;
+    return 0;
 }
