@@ -1,5 +1,5 @@
 #include <iostream>
-
+using namespace std;
 
 //int main() {
 //	int n = 1;
@@ -114,20 +114,40 @@
 //}
 
 
-//Exercise 
+//Exercise --This code is correct but will not run in visual studio because it doest support the GCC compiler
+//int main() {
+//	int age;
+//	cin >> age;
+//	switch (age) {
+//		case 0 ... 3:
+//			cout << "Free";
+//			break;
+//		case 4 ... 6:
+//			cout << "discounted";
+//			break;
+//		case 7 ... 99999999:
+//			cout << "Normal";
+//			break;
+//	}
+//	return 0;
+//}
+
+
+// for loops 
+
+//int main() {
+//	for (double i = 10; i >= 2; i /= 2) {
+//		std::cout << i << std::endl;
+//	}
+//	return 0;
+//}
+
+// while loop
+
 int main() {
-	int age;
-	std::cin >> age;
-	switch (age) {
-		case 0 ... 3:
-			std::cout << "Free";
-			break;
-		case 4 ... 6:
-			std::cout << "discounted";
-			break;
-		case 7 ... 99999999:
-			std::cout << "Normal";
-			break;
+	int i = 12;
+	while (i >= 6) {
+		std::cout << i << '\n';
+		i--;
 	}
-	return 0;
 }
