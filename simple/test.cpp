@@ -144,10 +144,22 @@ using namespace std;
 
 // while loop
 
+//int main() {
+//	int i = 12;
+//	while (i >= 6) {
+//		std::cout << "there are still enough people" << '\n';
+//		i--;
+//	}
+//}
+
+
+//do while loop
+
 int main() {
-	int i = 12;
-	while (i >= 6) {
+	int i = 5;
+	do {
+		i += 2;
 		std::cout << i << '\n';
-		i--;
-	}
+	} while (i <= 40);
+	return 0;
 }
