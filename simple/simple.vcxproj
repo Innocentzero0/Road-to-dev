@@ -139,10 +139,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="constants.cpp" />
-    <ClCompile Include="exercise1.cpp" />
-    <ClCompile Include="multiline print statements.cpp" />
-    <ClCompile Include="simple.cpp" />
     <ClCompile Include="test.cpp">
       <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Default</LanguageStandard>
     </ClCompile>
