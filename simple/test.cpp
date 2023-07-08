@@ -155,11 +155,20 @@ using namespace std;
 
 //do while loop
 
+//int main() {
+//	int i = 5;
+//	do {
+//		i += 2;
+//		std::cout << i << '\n';
+//	} while (i <= 40);
+//	return 0;
+//}
+
 int main() {
-	int i = 5;
-	do {
-		i += 2;
-		std::cout << i << '\n';
-	} while (i <= 40);
+	int x = 1;
+	while (x < 10) {
+		std::cout << "hello world" << std::endl;
+		x += 3;
+	}
 	return 0;
 }
