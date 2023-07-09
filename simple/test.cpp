@@ -210,10 +210,15 @@ double prices[] = { 45.4, 48.3, 65.1, 3.65, 5.78 };
 //}
 
 // multidimensional array
-int seats[2][3] = { {1, 2, 3}, {4, 5, 6} };
-int main() {
-        std::cout << seats[1][2];
-        return 0;
-}
+//int seats[2][3] = { {1, 2, 3}, {4, 5, 6} };
+//int main() {
+//        std::cout << seats[1][2];
+//        return 0;
+//}
 
-git commit - m "multidimensional array"git commit - m "multidimensional array"git commit - m "multidimensional array"git commit - m "multidimensional array"git commit - m "multidimensional array"
+int num = 56;
+int* p = &num;
+
+int main() {
+    std::cout << *p;
+}
