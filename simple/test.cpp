@@ -199,22 +199,25 @@ double prices[] = { 45.4, 48.3, 65.1, 3.65, 5.78 };
 
 // function to calculate the total price in a shopping cart
 
-int main() {
-    double prices[] = { 6.99, 8.5, 42.9, 105.4, 42, 98.1, 2.39, 1.99, 68.76, 9.99, 33.67, 105, 99, 67, 24.56, 0.2, 59.87, 77.2 };
-    double total = 0;
-    for (double price : prices) {
-        total += price;
-    }
-    std::cout << total;
-    return 0;
-}
-
-// multidimensional array
-//int seats[2][3] = { {1, 2, 3}, {4, 5, 6} };
 //int main() {
-//        std::cout << seats[1][2];
-//        return 0;
+//    double prices[] = { 6.99, 8.5, 42.9, 105.4, 42, 98.1, 2.39, 1.99, 68.76, 9.99, 33.67, 105, 99, 67, 24.56, 0.2, 59.87, 77.2 };
+//    double total = 0;
+//    for (double price : prices) {
+//        total += price;
+//    }
+//    std::cout << total;
+//    return 0;
 //}
+
+ //multidimensional array
+int seats[2][3] = {
+    {1, 2, 3},
+    {4, 5, 6}
+};
+int main() {
+        std::cout << seats[1][2];
+        return 0;
+}
 
 
 // pointers
@@ -230,6 +233,7 @@ double arr[] = { 6.99, 8.5, 42.9, 105.4, 42, 98.1, 2.39, 1.99, 68.76, 9.99, 33.6
 double* p = arr;
 
 //int main() {
+//
 //	std::cout << *p << std::endl; //the output is 6.99 because the variable the array is in is also a pointer to the first value in the array so to print the second value it'll be *(p+1)
 //	std::cout << *(p + 1) << std::endl; // 2nd value in the array
 //	std::cout << *(p + 2) << std::endl; // 3rd value in the array
