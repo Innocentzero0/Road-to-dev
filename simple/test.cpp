@@ -1,5 +1,6 @@
 #include <iostream>
 
+//infinity loop
 //int main() {
 //	int n = 1;
 //	while (n != 0) {
@@ -181,7 +182,7 @@
 /// <summary>
 /// learnt something new i guess
 /// </summary>
-double prices[] = { 45.4, 48.3, 65.1, 3.65, 5.78 };
+//double prices[] = { 45.4, 48.3, 65.1, 3.65, 5.78 };
 //int main() {
 //	for (int i = 0; i < 5; i++) {
 //		std::cout << prices[i] << std::endl;
@@ -214,10 +215,10 @@ int seats[2][3] = {
     {1, 2, 3},
     {4, 5, 6}
 };
-int main() {
-        std::cout << seats[1][2];
-        return 0;
-}
+//int main() {
+//        std::cout << seats[1][2];
+//        return 0;
+//}
 
 
 // pointers
@@ -229,8 +230,8 @@ int main() {
 //}
 
 // pointers in arrays
-double arr[] = { 6.99, 8.5, 42.9, 105.4, 42, 98.1, 2.39, 1.99, 68.76, 9.99, 33.67, 105, 99, 67, 24.56, 0.2, 59.87, 77.2 };
-double* p = arr;
+double prices[] = { 6.99, 8.5, 42.9, 105.4, 42, 98.1, 2.39, 1.99, 68.76, 9.99, 33.67, 105, 99, 67, 24.56, 0.2, 59.87, 77.2 };
+double* p = prices;
 
 //int main() {
 //
@@ -239,4 +240,86 @@ double* p = arr;
 //	std::cout << *(p + 2) << std::endl; // 3rd value in the array
 //	return 0;
 //}
+
+//Prints out the values in the array 
+//int main() {
+//    for (int price: prices) {
+//        std::cout << prices[price] << std::endl;
+//    }
+//    return 0;
+//}
+
+//int main() {
+//    for (int i = 0; i < 2; i++) {
+//        for (int j = 0; j < 3; j++) {
+//            std::cout << seats[i][j] << std::endl;
+//        }
+//    }
+//        
+//    return 0;
+//}
+
+
+
+int main() {
+    int arr[] = { 2, 4, 6, 8 };
+
+    int *p = arr;
+
+    for (int p = 0; p < 4; p++) {
+        std::cout << *p << std::endl;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

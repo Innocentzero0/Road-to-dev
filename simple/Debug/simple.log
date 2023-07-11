@@ -1,2 +1,3 @@
 ﻿  test.cpp
-  simple.vcxproj -> D:\CODE\Projects\simple\Debug\simple.exe
+D:\CODE\Projects\simple\simple\test.cpp(270,22): error C2100: illegal indirection
+D:\CODE\Projects\simple\simple\test.cpp(270,19): error C2088: '<<': illegal for class
