@@ -246,8 +246,68 @@ void hello() {
     std::cout << "Hello!" << std::endl;
     std::cout << "I am a sample function";
 }
+//note void is the only function that does not return a value
 
+//function overloading is defining the same function but with a different data type as seen below 
+
+void sum(int x, int y) {
+	std::cout << x + y << std::endl;
+}
+void sum(double x, double y) {
+	std::cout << x + y << std::endl;
+}
+
+//You cannot overload function declarations that differ only by return type, The following declaration results in an error
+//int demo(int x) {
+//	return x;
+//}
+//double demo(int x) {
+//	return x / 2;
+//}
+
+
+void addition() {
+	sum(42, 31);
+	sum(3.14, 5.66);
+}
+
+//Another handy thing when working with functions are default arguments, When defining a function, you can specify a default value for each of the last parameters, If the corresponding argument is missing when you call a function, it uses the provided default value.
+
+int area(int x, int y = 1) {
+	return x * y;
+}
+
+void default_area() {
+	std::cout << area(8, 5) << std::endl;
+	std::cout << area(6) << std::endl;
+}
+
+//Decimal Days to Seconds
+
+int toSeconds(int days) {
+	return (days * 24 * 60 * 60);
+}
+
+double toSeconds(double days) {
+	return (days * 24 * 60 * 60);
+}
+
+void converter() {
+	double days;
+	std::cin >> days;
+
+	double seconds = toSeconds(days);
+	std::cout << seconds;
+
+	std::cout << std::endl;
+
+	int days2;
+	std::cin >> days2;
+
+	int seconds2 = toSeconds(days2);
+	std::cout << seconds2;
+}
 
 int main() {
-	hello();
+	converter();
 }
