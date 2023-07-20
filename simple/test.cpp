@@ -1,5 +1,7 @@
 #include <iostream>
 
+
+
 //infinity loop
 void infinity1() {
 	int n = 1;
@@ -308,12 +310,36 @@ void converter() {
 	std::cout << seconds2;
 }
 
-//Enum classes
-enum class Shade { Dark, Dim, Light, Bright };  //the 'shade' is the class/type and the value in the curly braces are the attainable values of any variable delcared with the enum class/type
+
+/*
+Enum classes
+the 'shade' is the class/type and the value in the curly braces are 
+the attainable values of any variable delcared with the enum class/type
+*/
+enum class Shade { Dark, Dim, Light, Bright }; 
 enum class Weight { Light, Medium, Heavy };
 
 Shade color = Shade::Light;
 Weight mass = Weight::Light;
+
+// void was used because it is not to return values
+void all_characters() {
+	int c;
+	for (c = 0; c <= 127; c++) {
+		char ask = c;
+		std::cout << ask << std::endl;
+		ask++;
+	}
+}
+
+
+
+enum class Day {Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday};
+
+Day day = Day::Saturday;
+
+
+
 
 
 
@@ -322,10 +348,5 @@ Weight mass = Weight::Light;
 
 
 int main() {
-	int c;
-	for (c = 0; c <= 127; c++) {
-		char ask = c;
-		std::cout << ask << std::endl;
-		ask++;
-	}
+	std::cout << mass;
 }
