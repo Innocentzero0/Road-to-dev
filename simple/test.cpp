@@ -322,6 +322,13 @@ enum class Weight { Light, Medium, Heavy };
 Shade color = Shade::Light;
 Weight mass = Weight::Light;
 
+/* To be able to print out the values of enum classes you have to use type casting
+* the syntax goes like std::cout << static_cast<the_new_type>(the_enum_class_value eg shade::Light)
+* To assign a new type to the enum class you also need to use type casting like this:
+* new vairable = static_cast<new variable type>(enum value)
+* 
+* you can also use type casting to change the data type of a variable forcefully
+*/
 // void was used because it is not to return values
 void all_characters() {
 	int c;
@@ -348,5 +355,5 @@ Day day = Day::Saturday;
 
 
 int main() {
-	std::cout << mass;
+	;
 }
