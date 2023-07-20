@@ -282,7 +282,7 @@ void default_area() {
 	std::cout << area(6) << std::endl;
 }
 
-//Decimal Days to Seconds
+//Time Converter
 
 int toSeconds(int days) {
 	return (days * 24 * 60 * 60);
@@ -308,6 +308,24 @@ void converter() {
 	std::cout << seconds2;
 }
 
+//Enum classes
+enum class Shade { Dark, Dim, Light, Bright };  //the 'shade' is the class/type and the value in the curly braces are the attainable values of any variable delcared with the enum class/type
+enum class Weight { Light, Medium, Heavy };
+
+Shade color = Shade::Light;
+Weight mass = Weight::Light;
+
+
+
+
+
+
+
 int main() {
-	converter();
+	int c;
+	for (c = 0; c <= 127; c++) {
+		char ask = c;
+		std::cout << ask << std::endl;
+		ask++;
+	}
 }
