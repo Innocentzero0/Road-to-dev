@@ -355,5 +355,5 @@ Day day = Day::Saturday;
 
 
 int main() {
-	;
+	
 }
