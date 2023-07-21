@@ -110,16 +110,16 @@ void chain() {
 //Exercise --This code is correct but will not run in visual studio because it doest support the GCC compiler
 //int main() {
 //	int age;
-//	cin >> age;
+//	std::cin >> age;
 //	switch (age) {
 //		case 0 ... 3:
-//			cout << "Free";
+//			std::cout << "Free";
 //			break;
 //		case 4 ... 6:
-//			cout << "discounted";
+//			std::cout << "discounted";
 //			break;
 //		case 7 ... 99999999:
-//			cout << "Normal";
+//			std::cout << "Normal";
 //			break;
 //	}
 //	return 0;
@@ -154,9 +154,9 @@ void loop2() {
 	} while (i <= 40);
 }
 
-// attays
+// arrays
 void arrays() {
-	double arr[] = { 1, 2, 3, 4, 5, 6 };              //declear the variable type of the array and equate it to the array values in curly braces
+	double arr[] = { 1, 2, 3, 4, 5, 6 };              //declare the variable type of the array and equate it to the array values in curly braces
 }
 
 //loops with arrays
@@ -168,9 +168,7 @@ void array_loop() {
 	}
 }
 
-/// <summary>
-/// learnt something new i guess
-/// </summary>
+//learnt something new i guess
 void price1() {
 	double prices[] = { 45.4, 48.3, 65.1, 3.65, 5.78 };
 	for (int i = 0; i < 5; i++) {
@@ -273,8 +271,10 @@ void addition() {
 	sum(3.14, 5.66);
 }
 
-//Another handy thing when working with functions are default arguments, When defining a function, you can specify a default value for each of the last parameters, If the corresponding argument is missing when you call a function, it uses the provided default value.
-
+/*Another handy thing when working with functions are default arguments, When defining a function, you can specify 
+a default value for each of the last parameters, If the corresponding argument is missing when you call a function,
+it uses the provided default value.
+*/
 int area(int x, int y = 1) {
 	return x * y;
 }
@@ -325,7 +325,7 @@ Weight mass = Weight::Light;
 /* To be able to print out the values of enum classes you have to use type casting
 * the syntax goes like std::cout << static_cast<the_new_type>(the_enum_class_value eg shade::Light)
 * To assign a new type to the enum class you also need to use type casting like this:
-* new vairable = static_cast<new variable type>(enum value)
+* new variable = static_cast<new variable type>(enum value)
 * 
 * you can also use type casting to change the data type of a variable forcefully
 */
@@ -349,11 +349,42 @@ Day day = Day::Saturday;
 
 
 
+int division(int value1, int value2) {
+	int divide = value1 / value2;
+	if (value2 == 0) {
+		std::cout << "ERROR" << std::endl;
+		return 0;;
+	}
+	return divide;
+}
 
+int addition(int value1, int value2) {
+	int add = value1 + value2;
+	return add;
+}
+
+int multiplication(int value1, int value2) {
+	int multiply = value1 * value2;
+	return multiply;
+}
+
+int subtraction(int value1, int value2) {
+	int minus = value1 - value2;
+	return minus;
+}
 
 
 
 
 int main() {
-	
+	int value1, value2;
+	std::cout << "input value1: ";
+	std::cin >> value1;
+	std::cout << "input value2: ";
+	std::cin >> value2;
+
+	std::cout << addition(value1, value2) << std::endl;
+	std::cout << subtraction(value1, value2) << std::endl;
+	std::cout << multiplication(value1, value2) << std::endl;
+	std::cout << division(value1, value2) << std::endl;
 }
