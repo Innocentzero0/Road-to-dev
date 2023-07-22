@@ -353,7 +353,7 @@ int division(int value1, int value2) {
 	int divide = value1 / value2;
 	if (value2 == 0) {
 		std::cout << "ERROR" << std::endl;
-		return 0;;
+		return 0;
 	}
 	return divide;
 }
@@ -372,8 +372,6 @@ int subtraction(int value1, int value2) {
 	int minus = value1 - value2;
 	return minus;
 }
-
-
 
 
 int main() {
