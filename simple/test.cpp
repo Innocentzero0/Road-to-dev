@@ -350,12 +350,11 @@ Day day = Day::Saturday;
 
 
 int division(int value1, int value2) {
-	int divide = value1 / value2;
 	if (value2 == 0) {
+		throw std::runtime_error("division by zero not allowed");
 		std::cout << "ERROR" << std::endl;
-		return 0;
 	}
-	return divide;
+	return value1 / value2;
 }
 
 int addition(int value1, int value2) {
@@ -384,5 +383,13 @@ int main() {
 	std::cout << addition(value1, value2) << std::endl;
 	std::cout << subtraction(value1, value2) << std::endl;
 	std::cout << multiplication(value1, value2) << std::endl;
-	std::cout << division(value1, value2) << std::endl;
+	try
+	{
+		std::cout << division(value1, value2);
+	}
+	catch (const std::exception& e) 
+	{
+		std::cout << "Error" << e.what() << std::endl;
+	}
+	std::system("pause");
 }
