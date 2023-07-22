@@ -346,7 +346,8 @@ enum class Day {Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday};
 Day day = Day::Saturday;
 
 
-
+/*working on learning error handling with the 
+*/
 
 
 int division(int value1, int value2) {
@@ -389,7 +390,7 @@ int main() {
 	}
 	catch (const std::exception& e) 
 	{
-		std::cout << "Error" << e.what() << std::endl;
+		std::cout << e.what() << std::endl;
 	}
 	std::system("pause");
 }
