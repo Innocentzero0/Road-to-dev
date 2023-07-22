@@ -346,14 +346,23 @@ enum class Day {Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday};
 Day day = Day::Saturday;
 
 
-/*working on learning error handling with the 
+/*working on learning error handling with the syntax throw std::runtime_error()
+* and the try function 
+* try
+ {
+	this line holds what calculation to be tried  
+ }
+ catch (const std::exception& (variable name where the error should be stored))
+ {
+	you print out the error message that was thrown in the throw syntax above for example:
+	std::cout << (variable name where the error should be stored).what() << std::endl;
+ )
 */
 
 
 int division(int value1, int value2) {
 	if (value2 == 0) {
-		throw std::runtime_error("division by zero not allowed");
-		std::cout << "ERROR" << std::endl;
+		throw std::runtime_error("Error: division by zero not allowed");
 	}
 	return value1 / value2;
 }
@@ -390,7 +399,9 @@ int main() {
 	}
 	catch (const std::exception& e) 
 	{
-		std::cout << e.what() << std::endl;
+		std::cout << "Error: " << e.what() << std::endl;
 	}
 	std::system("pause");
 }
+
+
