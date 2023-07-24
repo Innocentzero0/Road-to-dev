@@ -1,6 +1,6 @@
 #include <iostream>
 
-int main() {
+void statement() {
 	std::cout << " * \n";
 	std::cout << " *** \n";
 	std::cout << " ***** \n";
@@ -10,14 +10,14 @@ int main() {
 }
 
 
-int main() {
+void statement2() {
 	std::cout << " * \n" << " *** \n"
 		      << " ***** \n" << " * \n"
 		      << " * \n" << " * \n";
 }
 
 
-int main() {
+void statement3() {
 	std::cout << " * \n"
 			  << " *** \n"
 			  << " ***** \n"

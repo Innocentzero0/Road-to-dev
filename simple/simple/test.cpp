@@ -310,6 +310,14 @@ void converter() {
 	std::cout << seconds2;
 }
 
+double physics_constants();
+
+void statement();
+
+void statement2();
+
+void statement3();
+
 
 /*
 Enum classes
@@ -359,6 +367,9 @@ Day day = Day::Saturday;
  )
 */
 
+
+
+// calculator prototype
 
 int division(int value1, int value2) {
 	if (value2 == 0) {
