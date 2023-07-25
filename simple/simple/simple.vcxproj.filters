@@ -24,5 +24,14 @@
     <ClCompile Include="multiline print statements.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="arrays.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="calculatorprototype.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="enumclasses.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

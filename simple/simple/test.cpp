@@ -1,16 +1,5 @@
 #include <iostream>
 
-
-
-//infinity loop
-void infinity1() {
-	int n = 1;
-	while (n != 0) {
-		n = n + 1;
-		std::cout << n << std::endl;
-	}
-}
-
 void infinity2() {
 	int count = 1;
 	while (true) {
@@ -56,7 +45,7 @@ void age_limit() {
 	}
 }
 
-//switch statemens
+//switch statements
 
 void life() {
 	int choice;
@@ -154,56 +143,6 @@ void loop2() {
 	} while (i <= 40);
 }
 
-// arrays
-void arrays() {
-	double arr[] = { 1, 2, 3, 4, 5, 6 };              //declare the variable type of the array and equate it to the array values in curly braces
-}
-
-//loops with arrays
-
-void array_loop() {
-	double prices[] = { 45.4, 48.3, 65.1, 3.65, 5.78 };
-	for (int i = 0; i < 5; i++) {
-		std::cout << prices[i] << std::endl;
-	}
-}
-
-//learnt something new i guess
-void price1() {
-	double prices[] = { 45.4, 48.3, 65.1, 3.65, 5.78 };
-	for (int i = 0; i < 5; i++) {
-		std::cout << prices[i] << std::endl;
-	}
-}
-
-// for each loop iteratu=ing over an array
-
-void loop_arrays() {
-	double prices[] = { 45.4, 48.3, 65.1, 3.65, 5.78 };
-	for (double x : prices) {   // this automatically assigns x(which can be anything, it doesn't have to be named x) to each value in the array
-		std::cout << x << std::endl;
-	}
-}
-
-// function to calculate the total price in a shopping cart
-
-void list_prices() {
-    double prices[] = { 6.99, 8.5, 42.9, 105.4, 42, 98.1, 2.39, 1.99, 68.76, 9.99, 33.67, 105, 99, 67, 24.56, 0.2, 59.87, 77.2 };
-    double total = 0;
-    for (double price : prices) {
-        total += price;
-    }
-    std::cout << total;
-}
-
- //multidimensional array
-int seats[2][3] = {
-    {1, 2, 3},
-    {4, 5, 6}
-};
-void multidimensional_arrays() {
-        std::cout << seats[1][2];
-}
 
 
 // pointers
@@ -214,33 +153,24 @@ void pointer() {
     std::cout << *p;
 }
 
-// pointers in arrays
-//
-void three_price_list() {
-	double prices[] = { 6.99, 8.5, 42.9, 105.4, 42, 98.1, 2.39, 1.99, 68.76, 9.99, 33.67, 105, 99, 67, 24.56, 0.2, 59.87, 77.2 };
-	double *p = prices;
-	std::cout << *p << std::endl; //the output is 6.99 because the variable the array is in is also a pointer to the first value in the array so to print the second value it'll be *(p+1)
-	std::cout << *(p + 1) << std::endl; // 2nd value in the array
-	std::cout << *(p + 2) << std::endl; // 3rd value in the array
-}
+// array functions
+void arrays();
 
-//Prints out the values in the array 
-void item_list() {
-	int items[] = { 699, 85, 429, 1054, 42, 981, 239, 199, 6876, 999, 3367, 105, 99, 67, 2456, 2, 5987, 772 };
-    for (int item: items) {
-        std::cout << items[item] << std::endl;
-    }
-}
+void array_loop();
 
-void list_array() {
-    for (int i = 0; i < 2; i++) {
-        for (int j = 0; j < 3; j++) {
-            std::cout << seats[i][j] << std::endl;
-        }
-    }
-}
+void price1();
 
+void loop_arrays();
 
+void list_prices();
+
+void multidimensional_arrays();
+
+void three_price_list();
+
+void item_list();
+
+void list_array();
 
 void hello() {
     std::cout << "Hello!" << std::endl;
@@ -284,31 +214,6 @@ void default_area() {
 	std::cout << area(6) << std::endl;
 }
 
-//Time Converter
-
-int toSeconds(int days) {
-	return (days * 24 * 60 * 60);
-}
-
-double toSeconds(double days) {
-	return (days * 24 * 60 * 60);
-}
-
-void converter() {
-	double days;
-	std::cin >> days;
-
-	double seconds = toSeconds(days);
-	std::cout << seconds;
-
-	std::cout << std::endl;
-
-	int days2;
-	std::cin >> days2;
-
-	int seconds2 = toSeconds(days2);
-	std::cout << seconds2;
-}
 
 double physics_constants();
 
@@ -318,101 +223,13 @@ void statement2();
 
 void statement3();
 
-
-/*
-Enum classes
-the 'shade' is the class/type and the value in the curly braces are 
-the attainable values of any variable delcared with the enum class/type
-*/
-enum class Shade { Dark, Dim, Light, Bright }; 
-enum class Weight { Light, Medium, Heavy };
-
-Shade color = Shade::Light;
-Weight mass = Weight::Light;
-
-/* To be able to print out the values of enum classes you have to use type casting
-* the syntax goes like std::cout << static_cast<the_new_type>(the_enum_class_value eg shade::Light)
-* To assign a new type to the enum class you also need to use type casting like this:
-* new variable = static_cast<new variable type>(enum value)
-* 
-* you can also use type casting to change the data type of a variable forcefully
-*/
-// void was used because it is not to return values
-void all_characters() {
-	int c;
-	for (c = 0; c <= 127; c++) {
-		char ask = c;
-		std::cout << ask << std::endl;
-		ask++;
-	}
-}
-
-
-
-enum class Day {Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday};
-
-Day day = Day::Saturday;
-
-
-/*working on learning error handling with the syntax throw std::runtime_error()
-* and the try function 
-* try
- {
-	this line holds what calculation to be tried  
- }
- catch (const std::exception& (variable name where the error should be stored))
- {
-	you print out the error message that was thrown in the throw syntax above for example:
-	std::cout << (variable name where the error should be stored).what() << std::endl;
- )
-*/
-
+double number_days();
 
 
 // calculator prototype
 
-int division(int value1, int value2) {
-	if (value2 == 0) {
-		throw std::runtime_error("Error: division by zero not allowed");
-	}
-	return value1 / value2;
-}
-
-int addition(int value1, int value2) {
-	int add = value1 + value2;
-	return add;
-}
-
-int multiplication(int value1, int value2) {
-	int multiply = value1 * value2;
-	return multiply;
-}
-
-int subtraction(int value1, int value2) {
-	int minus = value1 - value2;
-	return minus;
-}
+void calculator_output();
 
 
 int main() {
-	int value1, value2;
-	std::cout << "input value1: ";
-	std::cin >> value1;
-	std::cout << "input value2: ";
-	std::cin >> value2;
-
-	std::cout << addition(value1, value2) << std::endl;
-	std::cout << subtraction(value1, value2) << std::endl;
-	std::cout << multiplication(value1, value2) << std::endl;
-	try
-	{
-		std::cout << division(value1, value2);
-	}
-	catch (const std::exception& error) 
-	{
-		std::cout << "Error: " << error.what() << std::endl;
-	}
-	std::system("pause");
 }
-
-
