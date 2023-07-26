@@ -83,30 +83,35 @@ char conversion(char convert) {
 //}
 
 int main() {
-	std::cout << "Did you beat the game? " << std::endl;
-
-	std::string reply;
-	std::cin >> reply;
-	bool beatGame;
-
-	if (reply == "yes") {
-		beatGame = true;
-	}
-	else if (reply == "no") {
-		beatGame = false;
-	}
 
 	std::cout << "Do you want to play a game? (y/n): ";
+
 	std::string response_req;
 	std::cin >> response_req;
+
 	char response = conversion(response_req[0]);
+
 	if (response == 'y') {
 		std::cout << "lets play a game!" << std::endl;
+		std::cout << "Have you beaten this game before? (yes/no)" << std::endl;
+
+		std::string reply;
+		std::cin >> reply;
+		bool beatGame;
+
+		if (reply == "yes") {
+			beatGame = true;
+		}
+		else if (reply == "no") {
+			beatGame = false;
+		}
+
 		std::cout << "What difficulty would you like to play on? " << std::endl
 				  << "Easy" << std::endl
 				  << "Normal" << std::endl
 				  << "Hard" << std::endl 
 				  << "nightmare" << std::endl;
+
 		std::string setting_req;
 		std::cin >> setting_req;
 
@@ -129,4 +134,5 @@ int main() {
 	else {
 		std::cout << "hmmm... i don't quite understand you." << std::endl;
 	}
+	std::system("pause");
 }
