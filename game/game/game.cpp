@@ -83,6 +83,19 @@ char conversion(char convert) {
 //}
 
 int main() {
+	std::cout << "Did you beat the game? " << std::endl;
+
+	std::string reply;
+	std::cin >> reply;
+	bool beatGame;
+
+	if (reply == "yes") {
+		beatGame = true;
+	}
+	else if (reply == "no") {
+		beatGame = false;
+	}
+
 	std::cout << "Do you want to play a game? (y/n): ";
 	std::string response_req;
 	std::cin >> response_req;
@@ -97,10 +110,13 @@ int main() {
 		std::string setting_req;
 		std::cin >> setting_req;
 
-		if (setting_req == "easy" || setting_req == "medium" || setting_req == "hard") {
+		if ((setting_req == "easy" || setting_req == "medium" || setting_req == "hard") && beatGame) {
 			std::cout << "I guess i can call you a chicken then. But you're lucky, you get to respawn" << std::endl;
 			}
-		else if (setting_req == "nightmare") {
+		else if (setting_req == "easy" || setting_req == "medium" || setting_req == "hard") {
+			std::cout << "Beat the game to unlock nightmare difficulty and other new game plus content. You get to respawn" << std::endl;
+		}
+		else if ((setting_req == "nightmare") && beatGame) {
 			std::cout << "Get ready for a world of pain soldier!!!" << std::endl;
 		}
 		else {
