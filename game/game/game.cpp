@@ -42,18 +42,37 @@
 
 //the conversion process can also be put inside a function
 
-char conversion(char response_req) {
-	char new_response = tolower(response_req);    // or tolower(response[0] if you used the first approach
-	return new_response;
+char conversion(char convert) {    
+	return tolower(convert); // or tolower(response[0] if you used the first approach
 }
-
+// using the function instead of just converting the value directly helps preserve the original data
 int main() {
 	std::cout << "Do you want to play a game? (y/n): ";
-	char response_req = getchar();
-	char response = conversion(response_req);
+	std::string response_req;
+	std::cin >> response_req;
+	char response = conversion(response_req[0]);
 	if (response == 'y') {
 		std::cout << "lets play a game!" << std::endl;
-		std::system("pause");
+		std::cout << "What difficulty would you like to play on? " << std::endl
+				  << "Easy" << std::endl
+				  << "Normal" << std::endl
+				  << "Hard" << std::endl;
+		std::string setting_req;
+		std::cin >> setting_req;
+		char setting = conversion(setting_req[0]);
+		if (setting == 'e') {
+			std::cout << "I guess i can call you a chicken then." << std::endl;
+			}
+		else if (setting == 'n') {
+			std::cout << "You pass, barely" << std::endl;
+		}
+		else if (setting == 'h') {
+			std::cout << "That's how you do it!!" << std::endl;
+		}
+		else {
+			std::cout << "Are you even prepared for this?? " << std::endl;
+		}
+
 	}
 	else if (response == 'n') {
 		std::cout << "Maybe next time then... See ya!" << std::endl;
@@ -61,5 +80,4 @@ int main() {
 	else {
 		std::cout << "hmmm... i don't quite understand you." << std::endl;
 	}
-
 }
