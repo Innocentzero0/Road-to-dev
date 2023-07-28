@@ -214,6 +214,18 @@ void default_area() {
 	std::cout << area(6) << std::endl;
 }
 
+/*
+The name of a destructor will be exactly the same as the class, only 
+prefixed with a tilde(~).A destructor can't return a value or take any parameters.
+
+*/
+class MyClass {
+public:
+	~MyClass() {
+		// some code
+	}
+};
+
 
 double physics_constants();
 
