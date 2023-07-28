@@ -4,7 +4,8 @@
 ## Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
 
 Gitignore_templates/
-
+C++/Calculator/Github.zip
+Python/Pyhton milestone project; Movie directory app/Github.zip
 # User-specific files
 *.rsuser
 *.suo
