@@ -217,15 +217,16 @@ void default_area() {
 /*
 The name of a destructor will be exactly the same as the class, only 
 prefixed with a tilde(~).A destructor can't return a value or take any parameters.
+this should be put in the header file/
 
-*/
+
 class MyClass {
 public:
 	~MyClass() {
 		// some code
 	}
 };
-
+*/
 
 double physics_constants();
 

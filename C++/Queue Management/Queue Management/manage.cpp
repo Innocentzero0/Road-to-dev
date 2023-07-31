@@ -39,7 +39,6 @@ public:
 		for (int i = size; i < size + 1; i++) {
 			queue[i] = item;
 			size++;
-			break;
 		}
 	}
 };

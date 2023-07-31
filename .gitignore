@@ -12,6 +12,7 @@ Python/Pyhton milestone project; Movie directory app/Github.zip
 *.user
 *.userosscache
 *.sln.docstates
+*.vscode/
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
