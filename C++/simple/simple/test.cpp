@@ -244,7 +244,6 @@ double number_days();
 void calculator_output();
 
 
-#include <iostream>
 
 
 class TV {
@@ -260,7 +259,8 @@ private:
 
 int main() {
 	//your code goes here
-	int h, w;
+	int h;
+	int w;
 	std::cin >> h >> w;
 	TV tv(h, w);
 	tv.area();
