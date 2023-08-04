@@ -1,31 +1,6 @@
 #include <iostream>
-
-class Birthday {
-public:
-	Birthday(std::string month, int day, int year) : month(month), day(day), year(year) {}
-	void printDate() {
-		std::cout << month << " " << day << " " << year << std::endl;
-	}
-private:
-	std::string month;
-	int day;
-	int year;
-};
-
-class Person {
-
-public:
-	Person(std::string name, Birthday dDay) : name(name), dateOfBirth(dDay) {}
-	
-	void printInfo() {
-		std::cout << name << std::endl;
-		dateOfBirth.printDate();
-	}
-
-private:
-	std::string name;
-	Birthday dateOfBirth;
-};
+#include "Birthday.h"
+#include "Person.h"
 
 int main() {
 	Person p1("John", Birthday("January", 1, 1980));
