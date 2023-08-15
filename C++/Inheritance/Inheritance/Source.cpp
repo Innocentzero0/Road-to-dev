@@ -33,6 +33,16 @@ class Phoenix: public Bird, public Species {
 public:
 };
 
+/*
+When inheriting classes, the base class' constructor and destructor are not inherited.
+However, they are being called when an object of the derived class is created or deleted.
+*/
+
+/*
+Note that the base class' constructor is called first, and the derived class' constructor is called next.
+When the object is destroyed, the derived class' destructor is called, and then the base class' destructor is called.
+You can think of it as the following: The derived class needs its base class in order to work - that is why the base class is set up first.
+*/
 
 
 int main() {
