@@ -1,6 +1,9 @@
 #include <iostream>
 using namespace std;
 
+/*In polymorphism you can have a single function with different parameters to multiple derived classes.
+this is achieved through the use of pointers to reference the function that needs to be derived*/
+
 class Enemy {
 protected:
     int attackPower;
