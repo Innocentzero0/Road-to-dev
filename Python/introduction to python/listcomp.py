@@ -7,14 +7,15 @@ for name in ninvited:
     print(f'chase {name} out of this place this instant')
 '''
 
-friends = ['Xpan', 'Jay', 'Nife']
+friends = input("What is your name: ")
+
 guests = ['Xpan', 'Jay', 'Nife', 'papy', 'demane']
 
-friendl = [f.lower() for f in friends]
+friendsLower = [friend.lower() for friend in friends]
 
-afriends = [
-    name.title() for name in guests if name.lower() in friendl 
+guestFriends = [
+    guest.title() for guest in guests if guest in friends
 ]
 
 
-print(afriends)
+print(guestFriends)
